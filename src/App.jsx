@@ -50,16 +50,21 @@ console.log(result.response.text());
 
   return (
     <>
-      <div className="container bg-gray-800 w-screen min-h-screen overflow-x-hidden text-white">
+      <div className="bg-blue-950 w-screen min-h-screen text-white">
         {
           isResponseScreen ?
-            <div className='h-[80vh]'>
-              <div className="header space-x-32 pt-[25px] flex items-center justify-between p-2 bg-blue-500 w-[100vw] px-[300px]">
-                <h2 className='text-2xl bg-pink-500 rounded-full p-2'>AssistMe</h2>
-                <button id='newChatBtn' className='bg-pink-500 p-[3px] rounded-[30px] cursor-pointer text-[14px] px-[20px]' onClick={newChat}>New Chat</button>
+            <div className='p-5'>
+              <div className="max-w-screen-2xl container mx-auto px-2 md:px-20px md:pl-64 md:pr-64 h-16 shadow-md fixed justify-between top-0 left-0 right-0 z-50 flex items-center p-6 bg-gray-500">
+
+                <div className='px-2 md:px-20px'>
+              <button className='text-2xl bg-pink-500 rounded-full px-4 '>AssistMe</button>
+              </div>
+              <div className='px-2 md:px-20px'>
+                <button id='newChatBtn' className='bg-pink-500  rounded-full cursor-pointer text-2xl px-4' onClick={newChat}>NewChat</button>
+              </div>
               </div>
 
-              <div className="messages">
+              <div className="messages mt-20 ">
               {
                 messages?.map((msg, index) => {
                   return (
@@ -71,9 +76,10 @@ console.log(result.response.text());
                 <div className="responseMsg">HTML stand for Hyper Text Markup Language</div> */}
               </div>
             </div> :
-            <div className="middle h-[80vh] flex items-center flex-col justify-center">
-              <h1 className='text-4xl'>Welcome to my chatbot !!</h1>
-              <div className="boxes mt-[30px] flex items-center gap-2">
+            <div className=" h-[80vh] flex items-center flex-col justify-center">
+              <h1 className='text-4xl px-1
+              '>Welcome to my chatbot</h1>
+              <div className="boxes mt-[30px] flex items-center gap-1 px-2">
                 <div className="card rounded-lg cursor-pointer transition-all hover:bg-[#201f1f] px-[20px] relative min-h-[20vh] bg-[#181818] p-[10px]">
                   <p className='text-[18px]'>What is coding ? <br />
                     How we can learn it.</p>
